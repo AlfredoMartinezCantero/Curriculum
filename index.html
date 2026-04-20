@@ -32,6 +32,37 @@
       --dur:        180ms;
     }
 
+    /* BOTÓN DESCARGA PDF */
+    .btn-pdf {
+      position: fixed;
+      top: 1.25rem;
+      right: 1.25rem;
+      z-index: 99;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .55rem 1.1rem;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(30,64,175,.35), 0 1px 2px rgba(0,0,0,.1);
+      transition: background var(--dur) var(--ease), transform 100ms var(--ease), box-shadow var(--dur) var(--ease);
+      text-decoration: none;
+    }
+    .btn-pdf:hover {
+      background: #1d3a9e;
+      box-shadow: 0 4px 18px rgba(30,64,175,.45);
+      transform: translateY(-1px);
+    }
+    .btn-pdf:active { transform: scale(.96); }
+    .btn-pdf svg { flex-shrink: 0; }
+    .btn-pdf.loading { opacity: .7; pointer-events: none; cursor: wait; }
+
     /* RESE */
     *, *::before, *::after { box-sizing: border-box; }
     html, body { height: 100%; margin: 0; }
@@ -345,6 +376,16 @@
 </head>
 <body>
 
+ <!-- Botón de descarga PDF -->
+  <button class="btn-pdf" id="btnPdf" aria-label="Descargar currículum en PDF">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    Descargar PDF
+  </button>
+
   <div class="page" role="document" aria-label="Currículum de Alfredo Martínez Cantero">
 
     <!-- COLUMNA PRINCIPAL -->
@@ -567,6 +608,37 @@
     </aside>
 
   </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    document.getElementById('btnPdf').addEventListener('click', function () {
+      const btn = this;
+      btn.classList.add('loading');
+      btn.textContent = 'Generando…';
+
+      const element = document.querySelector('.page');
+
+      const opt = {
+        margin:      [8, 8, 8, 8],          // mm: top, left, bottom, right
+        filename:    'CV_Alfredo_Martinez_Cantero.pdf',
+        image:       { type: 'jpeg', quality: 0.97 },
+        html2canvas: { scale: 2, useCORS: true, logging: false },
+        jsPDF:       { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak:   { mode: ['avoid-all', 'css'] }
+      };
+
+      html2pdf().set(opt).from(element).save().then(() => {
+        btn.classList.remove('loading');
+        btn.innerHTML = `
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Descargar PDF`;
+      });
+    });
+  </script>
 
 </body>
 </html>
