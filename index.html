@@ -177,7 +177,7 @@
 
     /* SECCIONES */
     section + section,
-    .divider + section { /* separación gestionada por .divider */ }
+.divider + section { /* separación gestionada por .divider */ }
 
     .section-title {
       font-family: var(--font-body);
@@ -414,15 +414,57 @@
       <section aria-labelledby="obj-title">
         <h2 id="obj-title" class="section-title">Perfil Profesional</h2>
         <p class="lead">
-          Profesional polivalente en formación como Técnico Superior en
-          <strong>Desarrollo de Aplicaciones Multiplataforma (DAM)</strong>, con experiencia previa en los
-          ámbitos logístico y educativo. Capacidad de adaptación a distintos entornos, con habilidades en
-          resolución de problemas, organización y trabajo en equipo. Actitud proactiva, motivación por la
-          tecnología y orientación hacia el desarrollo de software.
+        Estudiante de <strong>Desarrollo de Aplicaciones Multiplataforma (DAM)</strong>,
+        orientado al desarrollo de software y con experiencia práctica en programación,
+        bases de datos y desarrollo de aplicaciones. Acostumbrado a aprender de forma
+        autónoma, resolver problemas y trabajar de manera organizada. Busco seguir
+        desarrollándome en un entorno profesional, aportando iniciativa, capacidad de
+        adaptación y ganas de aprender.
         </p>
       </section>
 
       <div class="divider" aria-hidden="true"></div>
+
+      <!-- Proyectos destacados -->
+<section aria-labelledby="projects-title">
+  <h2 id="projects-title" class="section-title">Proyectos destacados</h2>
+
+  <div class="timeline">
+
+    <article class="timeline-item" aria-labelledby="project1-role">
+      <div id="project1-role" class="item-role">Sistema de Facturación / Mini-ERP</div>
+      <div class="item-meta">PHP · MySQL · HTML · CSS · JavaScript</div>
+      <p class="item-desc" style="display:block">
+        Aplicación de gestión con clientes, productos, presupuestos, facturas y
+        pagos. Implementación de CRUD, consultas SQL, generación de PDF,
+        envío de correos y control de acceso.
+      </p>
+    </article>
+
+    <article class="timeline-item" aria-labelledby="project2-role">
+      <div id="project2-role" class="item-role">AI Sales Copilot</div>
+      <div class="item-meta">Python · FastAPI · APIs · IA/LLM</div>
+      <p class="item-desc" style="display:block">
+        Aplicación orientada al análisis de conversaciones comerciales mediante
+        modelos de lenguaje, generando información sobre sentimiento,
+        clasificación de leads, resumen, intención y siguientes acciones.
+      </p>
+    </article>
+
+    <article class="timeline-item" aria-labelledby="project3-role">
+      <div id="project3-role" class="item-role">Gestor de Gastos</div>
+      <div class="item-meta">PHP · MySQL · JavaScript · Chart.js</div>
+      <p class="item-desc" style="display:block">
+        Aplicación para registrar y consultar gastos, con operaciones CRUD,
+        filtros, balance mensual, importación y exportación de datos y
+        representación gráfica.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"></div>
 
       <!-- Experiencia -->
       <section aria-labelledby="exp-title">
@@ -434,10 +476,10 @@
             <div id="exp1-role" class="item-role">Preparador Logístico</div>
             <div class="item-meta">Almacenes Silla, Valencia · 2025</div>
             <ul class="item-desc">
-              <li>Preparación de pedidos en plataformas logísticas de gran volumen.</li>
-              <li>Verificación y control de mercancías.</li>
-              <li>Manejo de transpaletas y herramientas de gestión logística.</li>
-              <li>Cumplimiento de procedimientos de seguridad.</li>
+              <li>Preparación y gestión de pedidos en un entorno logístico de gran volumen.</li>
+              <li>Verificación de mercancías y atención al detalle para evitar errores.</li>
+              <li>Trabajo coordinado con el equipo para cumplir objetivos y tiempos de preparación.</li>
+              <li>Seguimiento de procedimientos y adaptación a las necesidades del entorno de trabajo.</li>
             </ul>
           </article>
 
@@ -445,10 +487,10 @@
             <div id="exp2-role" class="item-role">Logístico</div>
             <div class="item-meta">Empresa Multinacional, Valencia · 2025</div>
             <ul class="item-desc">
-              <li>Preparación de pedidos para expedición.</li>
-              <li>Carga y descarga de mercancías.</li>
-              <li>Organización y reposición de productos en almacén.</li>
-              <li>Control de stock y apoyo en tareas logísticas.</li>
+              <li>Preparación y organización de pedidos para expedición.</li>
+              <li>Control y organización de productos y stock.</li>
+              <li>Trabajo en equipo para mantener un flujo de trabajo organizado y eficiente.</li>
+              <li>Cumplimiento de procedimientos y adaptación a diferentes tareas según las necesidades del equipo.</li>
             </ul>
           </article>
 
@@ -457,35 +499,26 @@
 
       <div class="divider" aria-hidden="true"></div>
 
-      <!-- Educación -->
-      <section aria-labelledby="edu-title">
-        <h2 id="edu-title" class="section-title">Educación</h2>
+        <!-- Educación -->
+        <section aria-labelledby="edu-title">
+          <h2 id="edu-title" class="section-title">Formación</h2>
 
-        <div class="timeline">
+          <div class="timeline">
 
-          <article class="timeline-item" aria-labelledby="edu1-role">
-            <div id="edu1-role" class="item-role">
-              Técnico Superior en Desarrollo de Aplicaciones Multiplataforma
-              <span style="font-weight:400;color:var(--ink-muted);font-size:12px;"> · En curso</span>
-            </div>
-            <div class="item-meta">CEAC, Valencia · Sept. 2025 — Actualidad</div>
-            <p class="item-desc" style="display:block">
-              Fundamentos de programación, bases de datos, desarrollo de interfaces y aplicaciones web y móviles.
-            </p>
-          </article>
+            <article class="timeline-item" aria-labelledby="edu1-role">
+              <div id="edu1-role" class="item-role">
+                Técnico Superior en Desarrollo de Aplicaciones Multiplataforma
+                <span style="font-weight:400;color:var(--ink-muted);font-size:12px;"> · En curso</span>
+              </div>
+              <div class="item-meta">CEAC, Valencia · Sept. 2025 — Actualidad</div>
+              <p class="item-desc" style="display:block">
+                Formación en programación, bases de datos, desarrollo de aplicaciones,
+                interfaces, desarrollo web y tecnologías multiplataforma.
+              </p>
+            </article>
 
-          <article class="timeline-item" aria-labelledby="edu2-role">
-            <div id="edu2-role" class="item-role">Técnico Superior en Educación Infantil</div>
-            <div class="item-meta">IES Misericordia, Valencia · 2020 — 2022</div>
-          </article>
-
-          <article class="timeline-item" aria-labelledby="edu3-role">
-            <div id="edu3-role" class="item-role">Técnico en Atención a Personas en Situación de Dependencia</div>
-            <div class="item-meta">IES Misericordia, Valencia · 2018 — 2020</div>
-          </article>
-
-        </div>
-      </section>
+          </div>
+        </section>
 
     </main>
 
@@ -537,6 +570,18 @@
             </div>
           </li>
 
+          <li class="contact-item">
+            <!-- Icono: Portafolio -->
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M19 6h-3V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3zM10 4h4v2h-4V4zm9 14H5a1 1 0 0 1-1-1v-4.05c1.13.66 2.52 1.05 4 1.05h3v1h2v-1h3c1.48 0 2.87-.39 4-1.05V17a1 1 0 0 1-1 1zm1-6.24A6.98 6.98 0 0 1 16 12h-3v-1h-2v1H8a6.98 6.98 0 0 1-4-1.24V9a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2.76z"/>
+            </svg>
+            <div>
+              <a href="https://alfredomartinezcantero.github.io/Portafolio/" target="_blank" rel="noopener noreferrer" aria-label="Portafolio de Alfredo">
+                Portafolio
+              </a>
+            </div>
+          </li>
+
         </ul>
       </section>
 
@@ -546,30 +591,66 @@
       <section aria-labelledby="skills-title">
         <h2 id="skills-title" class="section-title">Habilidades Técnicas</h2>
         <div class="skills-grid">
+
           <div class="skill-item">
-            <span class="skill-name">Python · SQL · HTML · CSS · JS</span>
+            <span class="skill-name">Python · SQL · MySQL</span>
             <span class="skill-tag">En formación</span>
           </div>
+
+          <div class="skill-item">
+            <span class="skill-name">PHP · Flask</span>
+            <span class="skill-tag">En formación</span>
+          </div>
+
+          <div class="skill-item">
+            <span class="skill-name">HTML · CSS · JavaScript</span>
+            <span class="skill-tag">En formación</span>
+          </div>
+
+          <div class="skill-item">
+            <span class="skill-name">APIs REST · IA/LLM</span>
+            <span class="skill-tag">Proyectos</span>
+          </div>
+
           <div class="skill-item">
             <span class="skill-name">Git / GitHub</span>
-            <span class="skill-tag">Básico-Medio</span>
-          </div>
-          <div class="skill-item">
-            <span class="skill-name">Flask · PHP</span>
             <span class="skill-tag">En formación</span>
           </div>
-          <div class="skill-item">
-            <span class="skill-name">Trabajo en equipo</span>
-            <span class="skill-tag">Alto</span>
-          </div>
-          <div class="skill-item">
-            <span class="skill-name">Investigación y análisis</span>
-            <span class="skill-tag">Medio</span>
-          </div>
+
         </div>
       </section>
 
       <div class="divider" aria-hidden="true"></div>
+
+      <!-- Competencias -->
+      <section aria-labelledby="competencias-title">
+        <h2 id="competencias-title" class="section-title">Competencias</h2>
+        <div class="skills-grid">
+
+          <div class="skill-item">
+            <span class="skill-name">Aprendizaje autónomo</span>
+          </div>
+
+          <div class="skill-item">
+            <span class="skill-name">Resolución de problemas</span>
+          </div>
+
+          <div class="skill-item">
+            <span class="skill-name">Trabajo en equipo</span>
+          </div>
+
+          <div class="skill-item">
+            <span class="skill-name">Organización y método</span>
+          </div>
+
+          <div class="skill-item">
+            <span class="skill-name">Atención al detalle</span>
+          </div>
+
+        </div>
+      </section>
+
+<div class="divider" aria-hidden="true"></div>
 
       <!-- Idiomas -->
       <section aria-labelledby="lang-title">
@@ -588,17 +669,6 @@
 
       <div class="divider" aria-hidden="true"></div>
 
-      <!-- Resumen -->
-      <section aria-labelledby="resumen-title">
-        <h2 id="resumen-title" class="section-title">Resumen</h2>
-        <p class="info-text">
-          Desarrollador en formación con pasión por la tecnología y el diseño de soluciones eficientes.
-          Comprometido con el aprendizaje continuo, las buenas prácticas de código y la creación de proyectos con impacto real.
-        </p>
-      </section>
-
-      <div class="divider" aria-hidden="true"></div>
-
       <!-- Información adicional -->
       <section aria-labelledby="extra-title">
         <h2 id="extra-title" class="section-title">Información Adicional</h2>
@@ -610,35 +680,74 @@
   </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <script>
-    document.getElementById('btnPdf').addEventListener('click', function () {
-      const btn = this;
-      btn.classList.add('loading');
-      btn.textContent = 'Generando…';
 
-      const element = document.querySelector('.page');
+<script>
+  document.getElementById('btnPdf').addEventListener('click', function () {
+    const btn = this;
+    btn.classList.add('loading');
+    btn.textContent = 'Generando…';
 
-      const opt = {
-        margin:      [8, 8, 8, 8],          // mm: top, left, bottom, right
-        filename:    'CV_Alfredo_Martinez_Cantero.pdf',
-        image:       { type: 'jpeg', quality: 0.97 },
-        html2canvas: { scale: 2, useCORS: true, logging: false },
-        jsPDF:       { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak:   { mode: ['avoid-all', 'css'] }
-      };
+    const element = document.querySelector('.page');
 
-      html2pdf().set(opt).from(element).save().then(() => {
+    const opt = {
+      margin: 0,
+      filename: 'CV_Alfredo_Martinez_Cantero.pdf',
+
+      image: {
+        type: 'jpeg',
+        quality: 0.98
+      },
+
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
+        logging: false,
+        backgroundColor: '#ffffff',
+        scrollX: 0,
+        scrollY: 0
+      },
+
+      jsPDF: {
+        unit: 'mm',
+        format: 'a4',
+        orientation: 'portrait'
+      },
+
+      pagebreak: {
+        mode: ['css', 'legacy']
+      }
+    };
+
+    html2pdf()
+      .set(opt)
+      .from(element)
+      .toPdf()
+      .get('pdf')
+      .then(function (pdf) {
+        const totalPages = pdf.internal.getNumberOfPages();
+
+        for (let i = 1; i <= totalPages; i++) {
+          pdf.setPage(i);
+        }
+      })
+      .save()
+      .then(function () {
         btn.classList.remove('loading');
+
         btn.innerHTML = `
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
             <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
             <polyline points="7 10 12 15 17 10"/>
             <line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Descargar PDF`;
+          Descargar PDF
+        `;
       });
-    });
-  </script>
+  });
+</script>
 
 </body>
 </html>
